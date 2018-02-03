@@ -1,5 +1,8 @@
 <?php
 // раз наш контроллер showsAction, то будет вызвана функция showsAction()
+/**
+ *
+ */
 function indexAction() {
     echo "indexAction";
     $title = 'Main';
