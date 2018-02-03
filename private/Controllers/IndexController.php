@@ -1,4 +1,5 @@
 <?php
+namespace Vendor\Frontcontroller\Controllers;
 
 class IndexController
 {

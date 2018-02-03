@@ -1,9 +1,12 @@
 <?php
+
+require __DIR__.'/../vendor/autoload.php';
+//var_dump($GLOBALS);
 // единая точка входа в приложение, сюда напрвляются все завпросы пользователя
 // например, пользователь перешел по ссылке /shows, сформировался запрс http://frontcontroller.example/shows,
 // на сервере он попал на данную страницу
 
-include "../private/Controllers/controllers.php";
+//include "../private/Controllers/controllers.php";
 // При вызове функции runController():
 /*
 function runController() {
@@ -30,7 +33,6 @@ class Router {
         $action = 'index';
 
         $routes = explode('/', $_SERVER['REQUEST_URI']);
-        var_dump($routes);
 
         if (!empty($routes[1])) {
             $controller = $routes[1]; // имя контроллера
@@ -39,7 +41,6 @@ class Router {
         if (!empty($routes[2])) {
             $action = $routes[2]; // имя метода
         }
-
 
         $controller = ucfirst(strtolower($controller)) . 'Controller';
         $action = strtolower($action) . 'Action';
@@ -65,8 +66,6 @@ class Router {
             // обработка ошибки
             var_dump('method not found');
         }
-
-        var_dump($controller, $action);
     }
 }
 Router::run();

@@ -1,0 +1,15 @@
+{
+    "name": "admin/frontcontroller.example",
+    "description": "desc",
+    "type": "project",
+    "require": {
+        "twig/twig": "2.4.4"
+    },
+    "autoload": {
+      "psr-4": {
+        "Vendor\\Frontcontroller\\": "private/"
+      }
+    },
+    "license": "MIT",
+    "minimum-stability": "alpha"
+}
