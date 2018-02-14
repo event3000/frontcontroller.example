@@ -1,7 +1,10 @@
 <?php
 namespace Vendor\Frontcontroller\Models;
 
-class AccountModel
+class GoodsModel
 {
 
+    function addGood() {
+
+    }
 }

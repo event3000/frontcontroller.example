@@ -1,9 +1,9 @@
 <?php
 namespace Vendor\Frontcontroller\Controllers;
-
-class IndexController
+use Vendor\Frontcontroller\Base\Controller;
+class IndexController extends Controller
 {
     function indexAction() {
-        echo "IndexController, indexAction";
+        $this->generateView($this->template, 'index_view.php');
     }
 }
