@@ -14,7 +14,11 @@ class GoodsController extends Controller
     }
 
     public function addAction() {
-        $view = "add_good_view.php";
-        $this->generateView($this->template, $view);
+        if (isset($_POST['title'])) {
+            echo (string) $this->model->addGood($_POST, $_FILES);
+        } else {
+            $view = "add_good_view.php";
+            $this->generateView($this->template, $view);
+        }
     }
 }
